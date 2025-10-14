@@ -1,6 +1,6 @@
 import os
 
-Data_user = [["admin", "admin123", "admin"], ["user", "user123", "user"]]
+Data_user = [["admin", "admin123", "admin"], ["user", "user123", "user"], ["zuhrihengker", "hengker123", "admin"]]
 Mainan_anak = [[1, "Mobil Remote", 120000, 10], [2, "Boneka Barbie", 95000, 8], [3, "Puzzle 1000 pcs", 75000, 15]]
 
 while True:
@@ -79,7 +79,7 @@ while True:
                                     if Stok_baru != "":
                                         Data_mainan[3] = int(Stok_baru)
                                     print("Data diperbarui!")
-                            if ditemukan == False:
+                            if Data_ketemu == False:
                                 print("ID tidak ditemukan!")
                         else:
                             print("ID tidak boleh kosong!")
