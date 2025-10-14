@@ -42,9 +42,12 @@ while True:
 
                     if Pilihan_admin == "1":
                         os.system("cls" if os.name == "nt" else "clear")
-                        print("=== DAFTAR MAINAN ===")
+                        print("===================== DAFTAR MAINAN =====================")
+                        print(f"{'ID':<4} {'Nama Mainan':<25} {'Harga':<15} {'Stok':<10}")
+                        print("---------------------------------------------------------")
                         for data_mainan in Mainan_anak:
-                            print(data_mainan)
+                            print(f"{data_mainan[0]:<4} {data_mainan[1]:<25} Rp{data_mainan[2]:>10,} {data_mainan[3]:<5}")
+                        print("=========================================================")
                         input("Enter untuk kembali...")
 
                     elif Pilihan_admin == "2":
@@ -64,10 +67,10 @@ while True:
                         ID_diperbarui = input("ID mainan: ")
                         if ID_diperbarui != "":
                             ID_diperbarui = int(ID_diperbarui)
-                            ditemukan = False
-                            for data_mainan in Mainan_anak:
+                            Data_ketemu = False
+                            for Data_mainan in Mainan_anak:
                                 if Data_mainan[0] == ID_diperbarui:
-                                    ditemukan = True
+                                    Data_ketemu = True
                                     print("Data lama:", Data_mainan)
                                     Nama_baru = input("Nama baru: ")
                                     Harga_baru = input("Harga baru: ")
