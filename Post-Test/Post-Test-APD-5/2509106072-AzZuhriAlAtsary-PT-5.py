@@ -46,7 +46,7 @@ while True:
                         print(f"{'ID':<4} {'Nama Mainan':<25} {'Harga':<15} {'Stok':<10}")
                         print("---------------------------------------------------------")
                         for data_mainan in Mainan_anak:
-                            print(f"{data_mainan[0]:<4} {data_mainan[1]:<25} Rp{data_mainan[2]:>10,} {data_mainan[3]:<5}")
+                            print(f"{data_mainan[0]:<4} {data_mainan[1]:<25} Rp{data_mainan[2]:>10,} {data_mainan[3]:>5}")
                         print("=========================================================")
                         input("Enter untuk kembali...")
 
@@ -124,15 +124,17 @@ while True:
 
                     if Pilihan_user == "1":
                         os.system("cls" if os.name == "nt" else "clear")
-                        print("=========== DAFTAR MAINAN ============")
-                        for Data_mainan in Mainan_anak:
-                            print(Data_mainan)
-                            print("===================================")
+                        print("==================== DAFTAR MAINAN =====================")
+                        print(f"{'ID':<4} {'Nama Mainan':<25} {'Harga':<15} {'Stok':<10}")
+                        print("---------------------------------------------------------")
+                        for data_mainan in Mainan_anak:
+                            print(f"{data_mainan[0]:<4} {data_mainan[1]:<25} Rp{data_mainan[2]:>10,} {data_mainan[3]:>5}")
+                        print("=========================================================")
                         input("Enter untuk kembali...")
 
                     elif Pilihan_user == "2":
                         ID_beli = input("Masukkan ID mainan: ")
-                        Jumlah_dibeli = input("Jumlah beli: ")
+                        Jumlah_beli = input("Jumlah beli: ")
                         if ID_beli != "" and Jumlah_beli != "":
                             ID_beli = int(ID_beli)
                             Jumlah_beli = int(Jumlah_beli)
@@ -161,10 +163,10 @@ while True:
 
     elif menu == "2":
         os.system("cls" if os.name == "nt" else "clear")
-        print("======== REGISTER ========")
+        print("=============== REGISTER ===============")
         Username_baru = input("Masukkan Username Baru: ")
         Password_baru = input("Masukkan Password: ")
-        print("==========================")
+        print("========================================")
         Username_sama = False
         for Data_pengguna in Data_user:
             if Data_pengguna[0] == Username_baru:
