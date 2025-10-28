@@ -158,7 +158,7 @@ while True:
                     elif Pilihan_admin == "5":
                         break
                     else:
-                        print("Pilihan tidak valid")
+                        print("Pilihan salah")
                     input("Enter untuk kembali...")
 
             else:
